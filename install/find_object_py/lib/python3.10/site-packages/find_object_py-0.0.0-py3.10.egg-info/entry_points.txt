@@ -1,0 +1,3 @@
+[console_scripts]
+subscriber = find_object_py.find_object:main
+

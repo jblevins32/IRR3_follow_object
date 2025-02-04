@@ -1,0 +1,4 @@
+source;share/chase_object/local_setup.bash
+source;share/chase_object/local_setup.dsv
+source;share/chase_object/local_setup.sh
+source;share/chase_object/local_setup.zsh

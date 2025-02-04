@@ -1,0 +1,32 @@
+[0.374s] Invoking command in '/home/jblevins32/IRR3/src/find_object_py': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jblevins32/IRR3/build/find_object_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/find_object_py build --build-base /home/jblevins32/IRR3/build/find_object_py/build install --record /home/jblevins32/IRR3/build/find_object_py/install.log --single-version-externally-managed install_data
+[0.520s] running egg_info
+[0.520s] writing ../../build/find_object_py/find_object_py.egg-info/PKG-INFO
+[0.521s] writing dependency_links to ../../build/find_object_py/find_object_py.egg-info/dependency_links.txt
+[0.521s] writing entry points to ../../build/find_object_py/find_object_py.egg-info/entry_points.txt
+[0.521s] writing requirements to ../../build/find_object_py/find_object_py.egg-info/requires.txt
+[0.521s] writing top-level names to ../../build/find_object_py/find_object_py.egg-info/top_level.txt
+[0.522s] reading manifest file '../../build/find_object_py/find_object_py.egg-info/SOURCES.txt'
+[0.522s] writing manifest file '../../build/find_object_py/find_object_py.egg-info/SOURCES.txt'
+[0.522s] running build
+[0.522s] running build_py
+[0.522s] creating /home/jblevins32/IRR3/build/find_object_py/build/lib/src
+[0.522s] copying src/__init__.py -> /home/jblevins32/IRR3/build/find_object_py/build/lib/src
+[0.522s] copying src/find_object.py -> /home/jblevins32/IRR3/build/find_object_py/build/lib/src
+[0.522s] copying src/find_orange_ball.py -> /home/jblevins32/IRR3/build/find_object_py/build/lib/src
+[0.523s] running install
+[0.523s] running install_lib
+[0.523s] creating /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/src
+[0.523s] copying /home/jblevins32/IRR3/build/find_object_py/build/lib/src/__init__.py -> /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/src
+[0.523s] copying /home/jblevins32/IRR3/build/find_object_py/build/lib/src/find_object.py -> /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/src
+[0.523s] copying /home/jblevins32/IRR3/build/find_object_py/build/lib/src/find_orange_ball.py -> /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/src
+[0.524s] byte-compiling /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/src/__init__.py to __init__.cpython-310.pyc
+[0.524s] byte-compiling /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/src/find_object.py to find_object.cpython-310.pyc
+[0.524s] byte-compiling /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/src/find_orange_ball.py to find_orange_ball.cpython-310.pyc
+[0.524s] running install_data
+[0.524s] running install_egg_info
+[0.525s] removing '/home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/find_object_py-0.0.0-py3.10.egg-info' (and everything under it)
+[0.526s] Copying ../../build/find_object_py/find_object_py.egg-info to /home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages/find_object_py-0.0.0-py3.10.egg-info
+[0.526s] running install_scripts
+[0.540s] Installing subscriber script to /home/jblevins32/IRR3/install/find_object_py/lib/find_object_py
+[0.540s] writing list of installed files to '/home/jblevins32/IRR3/build/find_object_py/install.log'
+[0.554s] Invoked command in '/home/jblevins32/IRR3/src/find_object_py' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jblevins32/IRR3/build/find_object_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jblevins32/IRR3/install/find_object_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/find_object_py build --build-base /home/jblevins32/IRR3/build/find_object_py/build install --record /home/jblevins32/IRR3/build/find_object_py/install.log --single-version-externally-managed install_data

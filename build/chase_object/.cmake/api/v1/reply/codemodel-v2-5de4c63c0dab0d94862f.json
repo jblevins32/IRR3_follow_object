@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-b28857065d9f25b8a7f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "chase_object",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "chase_object_pubsub::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-chase_object_pubsub-81d5ae5d94c0ca734a24.json",
+					"name" : "chase_object_pubsub",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "chase_object_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-chase_object_uninstall-ec49c52d985d5a0cfdb1.json",
+					"name" : "chase_object_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_publisher-a734b00ecbfc76324ba4.json",
+					"name" : "test_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c9a8e4a08335b309d41b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jblevins32/IRR3/build/chase_object",
+		"source" : "/home/jblevins32/IRR3/src/chase_object"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

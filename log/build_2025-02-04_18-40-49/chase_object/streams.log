@@ -1,0 +1,16 @@
+[0.013s] Invoking command in '/home/jblevins32/IRR3/build/chase_object': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jblevins32/IRR3/install/find_object_py:/home/jblevins32/IRR2/install/jacob_find_object_py:/home/jblevins32/IRR2/install/find_object_py:/opt/ros/humble DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jblevins32/IRR3/build/chase_object -- -j28 -l28
+[0.183s] [01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/jblevins32/IRR3/src/chase_object/chase_object_pubsub/chase_object_pubsub.cpp: No such file or directory
+[0.184s] compilation terminated.
+[0.184s] gmake[2]: *** [CMakeFiles/chase_object_pubsub.dir/build.make:76: CMakeFiles/chase_object_pubsub.dir/chase_object_pubsub/chase_object_pubsub.cpp.o] Error 1
+[0.184s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/chase_object_pubsub.dir/all] Error 2
+[0.184s] gmake[1]: *** Waiting for unfinished jobs....
+[0.184s] [01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/jblevins32/IRR3/src/chase_object/chase_object_pubsub/test_publisher.cpp: No such file or directory
+[0.184s] compilation terminated.
+[0.184s] gmake[2]: *** [CMakeFiles/test_publisher.dir/build.make:76: CMakeFiles/test_publisher.dir/chase_object_pubsub/test_publisher.cpp.o] Error 1
+[0.184s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/test_publisher.dir/all] Error 2
+[0.184s] gmake: *** [Makefile:146: all] Error 2
+[0.184s] [35m[1mConsolidate compiler generated dependencies of target chase_object_pubsub[0m
+[0.184s] [35m[1mConsolidate compiler generated dependencies of target test_publisher[0m
+[0.184s] [ 25%] [32mBuilding CXX object CMakeFiles/chase_object_pubsub.dir/chase_object_pubsub/chase_object_pubsub.cpp.o[0m
+[0.184s] [ 50%] [32mBuilding CXX object CMakeFiles/test_publisher.dir/chase_object_pubsub/test_publisher.cpp.o[0m
+[0.186s] Invoked command in '/home/jblevins32/IRR3/build/chase_object' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jblevins32/IRR3/install/find_object_py:/home/jblevins32/IRR2/install/jacob_find_object_py:/home/jblevins32/IRR2/install/find_object_py:/opt/ros/humble DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jblevins32/IRR3/build/chase_object -- -j28 -l28
