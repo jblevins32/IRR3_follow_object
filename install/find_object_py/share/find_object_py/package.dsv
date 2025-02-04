@@ -1,6 +1,0 @@
-source;share/find_object_py/hook/pythonpath.ps1
-source;share/find_object_py/hook/pythonpath.dsv
-source;share/find_object_py/hook/pythonpath.sh
-source;share/find_object_py/hook/ament_prefix_path.ps1
-source;share/find_object_py/hook/ament_prefix_path.dsv
-source;share/find_object_py/hook/ament_prefix_path.sh
