@@ -1,4 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target chase_object_pubsub[0m
-[35m[1mConsolidate compiler generated dependencies of target test_publisher[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/chase_object_pubsub.dir/chase_object_pubsub/chase_object_pubsub.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/test_publisher.dir/chase_object_pubsub/test_publisher.cpp.o[0m
