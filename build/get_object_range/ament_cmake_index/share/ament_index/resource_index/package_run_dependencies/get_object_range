@@ -1,1 +1,1 @@
-ament_lint_auto;ament_lint_common
+geometry_msgs;python3-numpy;rclpy;sensor_msgs;ros2launch;ament_copyright;ament_flake8;ament_pep257;python3-pytest

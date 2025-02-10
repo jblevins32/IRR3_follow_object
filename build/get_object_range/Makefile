@@ -197,6 +197,43 @@ get_object_range_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_object_range_uninstall.dir/build.make CMakeFiles/get_object_range_uninstall.dir/build
 .PHONY : get_object_range_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named get_object_location_pubsub
+
+# Build rule for target.
+get_object_location_pubsub: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 get_object_location_pubsub
+.PHONY : get_object_location_pubsub
+
+# fast build rule for target.
+get_object_location_pubsub/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_object_location_pubsub.dir/build.make CMakeFiles/get_object_location_pubsub.dir/build
+.PHONY : get_object_location_pubsub/fast
+
+src/location_finder.o: src/location_finder.cpp.o
+.PHONY : src/location_finder.o
+
+# target to build an object file
+src/location_finder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_object_location_pubsub.dir/build.make CMakeFiles/get_object_location_pubsub.dir/src/location_finder.cpp.o
+.PHONY : src/location_finder.cpp.o
+
+src/location_finder.i: src/location_finder.cpp.i
+.PHONY : src/location_finder.i
+
+# target to preprocess a source file
+src/location_finder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_object_location_pubsub.dir/build.make CMakeFiles/get_object_location_pubsub.dir/src/location_finder.cpp.i
+.PHONY : src/location_finder.cpp.i
+
+src/location_finder.s: src/location_finder.cpp.s
+.PHONY : src/location_finder.s
+
+# target to generate assembly for a file
+src/location_finder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/get_object_location_pubsub.dir/build.make CMakeFiles/get_object_location_pubsub.dir/src/location_finder.cpp.s
+.PHONY : src/location_finder.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +249,10 @@ help:
 	@echo "... test"
 	@echo "... get_object_range_uninstall"
 	@echo "... uninstall"
+	@echo "... get_object_location_pubsub"
+	@echo "... src/location_finder.o"
+	@echo "... src/location_finder.i"
+	@echo "... src/location_finder.s"
 .PHONY : help
 
 
