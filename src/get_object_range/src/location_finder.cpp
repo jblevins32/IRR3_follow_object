@@ -83,8 +83,6 @@ private:
                 publisher_->publish(recent_coords);
             }
         }
-
-
     }
 
     // memory management in cpp
