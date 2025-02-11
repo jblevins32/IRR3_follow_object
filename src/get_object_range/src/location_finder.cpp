@@ -34,7 +34,7 @@ public:
         timer_ = this->create_wall_timer(20ms, std::bind(&LocationFinder::timer_callback, this));
 
         publisher_ = this->create_publisher<geometry_msgs::msg::Point>
-        ("/obj_range",
+        ("/obj_location",
          10
         );
     }
@@ -42,26 +42,46 @@ public:
 private:
     void scan_callback(const sensor_msgs::msg::LaserScan & laser_msg) // message type & variable name
     {
-        RCLCPP_INFO(this->get_logger(), "Received Laser Scan");
+        // RCLCPP_INFO(this->get_logger(), "Received Laser Scan");
 
         recent_scan = laser_msg;
     }
 
     void coords_callback(const geometry_msgs::msg::Point & coords_msg)
     {
-        RCLCPP_INFO(this->get_logger(),  "Received Object Coordinates");
+        // RCLCPP_INFO(this->get_logger(),  "Received Object Coordinates %f", coords_msg.x);
 
         recent_coords = coords_msg;
     }
 
+    // Combine the lidar and camera data every timer callback
     void timer_callback()
     {
         // Check to be sure data has been collected from both topics
-        if (!recent_scan.ranges.empty() && !(recent_coords.x == 0.0 && recent_coords.y == 0.0 && recent_coords.z == 0.0))
+        if (!recent_scan.ranges.empty())
         {
-            // convert the msg to only the part in the camera and publish that to obj_range
+
+            // Lidar measures every 1.55 deg with 0 at center... so ~220 measurements
+            // Camera 62.2 deg FoV so +- 30 degrees with 0 at center... so about 30/1.55 = 20 lidar measurements on each side of center
+            // Recent_coords.x is (-1 to 1)
+
+            // Use the above logic to scale the object x coordinates to indices for the lidar data
+            int idx = std::round(recent_coords.x * 20);
+
+            // If the index is negative, wrap it around
+            if (idx < 0)
+            {
+                idx += 220;
+            }
+   
+            // Assign the distance of the object to the y field of the obj_coords since it is unused. This way, we do not need to set up a dual subscriber in the next node
+            recent_coords.y = recent_scan.ranges[idx];
             
-            RCLCPP_INFO(this->get_logger(),  "Publishing Object Location");
+            if (!std::isnan(recent_coords.y))
+            {
+                RCLCPP_INFO(this->get_logger(),"Publishing Object Angle %f (normed) and Object Range %f m",recent_coords.x, recent_coords.y);
+                publisher_->publish(recent_coords);
+            }
         }
 
 

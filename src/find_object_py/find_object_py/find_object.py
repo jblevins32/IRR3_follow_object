@@ -34,7 +34,6 @@ class FindObject(Node):
         obj_coords_point = Point()
         obj_coords_point.x = obj_coords
 
-        print(f'vel_cmd = {obj_coords_point}')
         self.publisher_.publish(obj_coords_point)
 
 def main(args=None):

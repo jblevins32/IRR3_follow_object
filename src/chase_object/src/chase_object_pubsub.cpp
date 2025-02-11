@@ -15,10 +15,8 @@ public:
     {
         RCLCPP_INFO(this->get_logger(), "Starting Rotate Robot Node");
 
-        // Create a subscription to the topic "coordinates"
-        // test publishing to obj_coords with r
         subscription_ = this->create_subscription<geometry_msgs::msg::Point>(
-            "/obj_coords", rclcpp::QoS(10).reliable(), std::bind(&RotateRobot::topic_callback, this, _1)); // _1 means the function will allow one argument
+            "/obj_location", rclcpp::QoS(10).reliable(), std::bind(&RotateRobot::topic_callback, this, _1)); // _1 means the function will allow one argument
 
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
     }
@@ -27,15 +25,25 @@ private:
     void topic_callback(const geometry_msgs::msg::Point & msg)
     {
         // Log the received message IF THIS IS NOT SHOWING, BE SURE THE TOPIC EXISTS IN THE SPECIFIC TERMINAL
-        RCLCPP_INFO(this->get_logger(), "Received coordinates: x=%f, y=%f", msg.x, msg.y);
+        // RCLCPP_INFO(this->get_logger(), "Received Object Location");
         
-        // Instantiate a Twist message
+        // Instantiate a Twist and desired distance
         auto twist_msg = geometry_msgs::msg::Twist();
-        
+        float desired_dist = 0.3; // meters
+
         // Calculate proportional control command which is a twist around the z axis
-        int Kp = 2.5;
-        twist_msg.angular.z = Kp*msg.x;
-        RCLCPP_INFO(this->get_logger(), "Twist command: %f", twist_msg.angular.z);
+        int Kp_angle = 2;
+        int Kp_dist = 2;
+
+        twist_msg.angular.z = Kp_angle*msg.x; // angle is held in the x object of msg
+        twist_msg.linear.x = Kp_dist*(msg.y - desired_dist); // distance is held in the y object of msg
+
+        // Only give a distance command if an object is detected (non-zero angle) and if the object is within 0.75m
+        if (msg.x == 0 || msg.y > 0.75){
+            twist_msg.linear.x = 0;
+        }
+
+        RCLCPP_INFO(this->get_logger(), "Twist command: angle %f, desired dist %f", twist_msg.angular.z, twist_msg.linear.x);
 
         // Publish the command velocity
         publisher_->publish(twist_msg);
