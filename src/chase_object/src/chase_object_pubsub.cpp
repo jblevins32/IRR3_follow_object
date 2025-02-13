@@ -29,7 +29,7 @@ private:
         
         // Instantiate a Twist and desired distance
         auto twist_msg = geometry_msgs::msg::Twist();
-        float desired_dist = 0.3; // meters
+        float desired_dist = 0.5; // meters
 
         // Calculate proportional control command which is a twist around the z axis
         int Kp_angle = 2;
