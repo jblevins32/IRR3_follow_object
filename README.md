@@ -9,4 +9,4 @@ Ideally, we can run these all with the launch file:
 `ros2 launch find_object_py follow_object.py`
 
 ## ROS Diagram
-![rosdiagram](rqt_graph.png)
+![rosdiagram3](rqt_graph.png)
